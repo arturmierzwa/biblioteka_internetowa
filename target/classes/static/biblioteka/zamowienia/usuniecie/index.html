@@ -1,0 +1,41 @@
+<!DOCTYPE Html>
+<html lang="pl-PL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<title>WITAJ W BIBLIOTECE!</title>
+</head>
+<body>
+<div class="jumbotron text-center">
+	<h1>DOSTĘPNE OPCJE:</h1>
+	<a class="btn btn-primary " href="http://localhost:8080/biblioteka/zamowienia/index.html" role="button">SKŁADANIE ZAMÓWIENIA</a>
+	<a class="btn btn-primary " href="http://localhost:8080/biblioteka/zamowienia/usuniecie/index.html" role="button">USUNIĘCIE ZAMÓWIENIA</a>
+	<hr />
+	<h2>PRZEGLĄDANIE BAZ DANYCH:</h2>
+  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/czytelnik" role="button">CZYTELNICY</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/autor" role="button">AUTORZY</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/ksiazka" role="button">KSIĄŻKI</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/zamowienia" role="button">ZAMÓWIENIA</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/autor-ksiazka" role="button">AUTORZY I ICH KSIĄŻKI</a>
+  </div>
+</div>
+
+<a class="btn btn-primary" href="http://localhost:8080/biblioteka/index.html" role="button">Powrót</a>
+<hr />
+
+<form action="http://localhost:8080/biblioteka/zamowienia/usuniecie" method="POST">
+Podaj ID ZAMOWIENIA: <input type="text" name="id" size="10"/> <br>
+<hr />
+<input type="submit" value= "USUŃ ZAMÓWIENIE" />
+
+</form>
+
+<script src="js/jquery-3.5.1.js"></script> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE Html>
+<html lang="pl-PL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<title>WITAJ W BIBLIOTECE!</title>
+</head>
+
+<body>
+
+<div class="jumbotron text-center">
+	<h1>PANEL PRACOWNIKA BIBLIOTEKI:</h1>
+	
+	<a class="btn btn-primary " href="http://localhost:8080/biblioteka/czytelnik/index.html" role="button">DODAWANIE CZYTELNIKA DO BAZY DANYCH</a>
+	<a class="btn btn-primary " href="http://localhost:8080/biblioteka/ksiazka/index.html" role="button">DODAWANIE KSIĄŻKI DO BAZY DANYCH</a>
+	<a class="btn btn-primary " href="http://localhost:8080/biblioteka/autor/index.html" role="button">DODAWANIE AUTORA DO BAZY DANYCH</a>
+	<hr />
+	<h3>PRZEGLĄDANIE BAZ DANYCH:</h3>
+  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/czytelnik" role="button">CZYTELNICY</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/autor" role="button">AUTORZY</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/ksiazka" role="button">KSIĄŻKI</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/zamowienia" role="button">ZAMÓWIENIA</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/autor-ksiazka" role="button">AUTORZY I ICH KSIĄŻKI</a>
+<a class="btn btn-primary" href="http://localhost:8080/biblioteka/czytelnik" role="button">CZYTELNICY</a>
+  </div>
+</div>
+
+	<a class="btn btn-primary" href="http://localhost:8080/biblioteka/index.html" role="button">Powrót</a>
+<hr />	
+
+<h6>WPROWADŹ DANE NOWEGO CZYTELNIKA:</h6>
+
+<form action="http://localhost:8080/biblioteka/czytelnik/dodanie" method="POST">  
+ID: <input type="text" name="id" size="25"/> <br>
+Login: <input type="text" name="login" size="22"/> <br>
+Hasło: <input type="text" name="haslo" size="22"/> <br>
+Imię i nazwisko: <input type="text" name="imie_nazwisko" size="35"/> <br>
+Miejscowość: <input type="text" name="miasto" size="37"/> <br>
+Ulica i nr domu/mieszkania: <input type="text" name="ulica" size="40"/> <br>
+Kod pocztowy: <input type="text" name="kod" size="36"/> <br>
+E-mail: <input type="text" name="email" size="42"/> <br>
+Telefon: <input type="text" name="telefon" size="41"/> <br>
+<hr />
+<input type="submit" value="DODAJ" />
+</form>
+
+<script src="js/jquery-3.5.1.js"></script> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
