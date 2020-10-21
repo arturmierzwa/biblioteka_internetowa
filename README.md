@@ -2,7 +2,7 @@
 
 Hello,
 
-To use the application, import the data to your IDE, run as a JAVA application and then go to Internet Browser. It starts on a localhost.
+To use the application, import the data to your IDE, run as a JAVA application and then go to the Internet Browser. It starts on a localhost.
 
 Below you will find short description how to run the application using the files from Repository. 
 Steps refer to Eclipse IDE (of course, you can run the application on different IDE's as well)
