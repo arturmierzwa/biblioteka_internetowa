@@ -14,6 +14,6 @@ Steps refer to Eclipse IDE (of course, you can run the application on different 
 In the last of the import window, you should see that Project will be Import as a Maven (Wizard analyzes the content of files to find projects and import them in the IDE correctly)
 
 4. Click Finish
-5. Right click on the name of the Project: "> biblioteka_internetowa" and choose Run as -> Java Application
+5. Right click on the name of the Project: "> biblioteka_internetowa" and choose Run as -> Java Application (src/main/java/pl/am/Application.java class will start).
 6. Go to the Internet Browser, application starts on http://localhost:8080/
 7. Click "START!" and enjoy :)
