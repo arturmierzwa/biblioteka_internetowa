@@ -1,0 +1,12 @@
+pl\am\repositories\KsiazkaRepository.class
+pl\am\model\Ksiazka.class
+pl\am\model\Zamowienia.class
+pl\am\repositories\ZamowieniaRepository.class
+pl\am\configuration\DatabaseConfiguration.class
+pl\am\model\Czytelnik.class
+pl\am\Application.class
+pl\am\controller\IndexController.class
+pl\am\model\Autor.class
+pl\am\configuration\DbInitalizer.class
+pl\am\repositories\AutorRepository.class
+pl\am\repositories\CzytelnikRepository.class
