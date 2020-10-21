@@ -1,0 +1,68 @@
+<!DOCTYPE Html>
+<html lang="pl-PL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<title>WITAJ W BIBLIOTECE!</title>
+</head>
+<body>
+<div class="jumbotron text-center">
+	<h1>DOSTĘPNE OPCJE:</h1>
+	<a class="btn btn-primary " href="http://localhost:8080/biblioteka/zamowienia/index.html" role="button">SKŁADANIE ZAMÓWIENIA</a>
+	<a class="btn btn-primary " href="http://localhost:8080/biblioteka/zamowienia/usuniecie/index.html" role="button">USUNIĘCIE ZAMÓWIENIA</a>
+	<hr />
+	<h2>PRZEGLĄDANIE BAZ DANYCH:</h2>
+  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/czytelnik" role="button">CZYTELNICY</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/autor" role="button">AUTORZY</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/ksiazka" role="button">KSIĄŻKI</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/zamowienia" role="button">ZAMÓWIENIA</a>
+  <a class="btn btn-primary" href="http://localhost:8080/biblioteka/autor-ksiazka" role="button">AUTORZY I ICH KSIĄŻKI</a>
+  </div>
+</div>
+
+<a class="btn btn-primary" href="http://localhost:8080/biblioteka/index.html" role="button">Powrót</a>
+<hr />
+
+<form action="http://localhost:8080/biblioteka/zamowienia/potwierdzenie" method="POST">
+Podaj ID CZYTELNIKA: <input type="text" name="id_czytelnik" size="10"/> <br>
+Podaj ID KSIĄŻKI: <input type="text" name="id_ksiazka" size="14"/> <br>
+DATA ZAMÓWIENIA (DD-MM-RRRR) : <input type="text" id="data_zamowienia" name="data_zamowienia" size="16"/> <br>
+DATA ODBIORU (DD-MM-RRRR) : <input type="text" id="data_odbioru" name="data_odbioru" size="20"/> <br>
+DATA ZWROTU (DD-MM-RRRR) : <input type="text" id="data_zwrotu" name="data_zwrotu" size="21"/> <br>
+<hr />
+<input type="submit" value= "ZŁÓŻ ZAMÓWIENIE" />
+
+</form>
+
+<script src="js/jquery-3.5.1.js"></script> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function formatDate (d) {
+      let month = d.getMonth()+1;
+      let day = d.getDate();
+      return ((''+day).length<2 ? '0' : '') + day + '-' +
+      ((''+month).length<2 ? '0' : '') + month + '-' +
+      d.getFullYear();
+    }
+
+    Date.prototype.addDays = function(days) {
+      var date = new Date(this.valueOf());
+      date.setDate(date.getDate() + days);
+      return date;
+    }
+
+    $(
+      function () {
+        $('#data_zamowienia').val(formatDate(new Date()))
+        $('#data_odbioru').val(formatDate(new Date().addDays(1)))
+        $('#data_zwrotu').val(formatDate(new Date().addDays(30)));}
+    );
+
+</script>
+
+</body>
+</html>
